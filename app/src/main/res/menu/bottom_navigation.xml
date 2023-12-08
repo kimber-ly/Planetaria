@@ -8,11 +8,11 @@
         android:icon="@drawable/saturn"
         android:title="APOD" />
     <item
-        android:id="@+id/item_2"
+        android:id="@+id/epic_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:icon="@drawable/stars"
-        android:title="Item 2" />
+        android:icon="@drawable/earth"
+        android:title="EPIC" />
     <item
         android:id="@+id/item_3"
         android:layout_width="wrap_content"

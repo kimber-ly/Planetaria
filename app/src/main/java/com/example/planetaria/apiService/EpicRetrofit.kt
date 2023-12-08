@@ -5,10 +5,10 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object Retrofit {
-    private const val BASE_URL = "https://api.nasa.gov/planetary/"
+object EpicRetrofit {
+    private const val BASE_URL = "https://api.nasa.gov/EPIC/api/natural/"
 
-    val instance: ApodApiService by lazy {
+    val instance: EpicApiService by lazy {
         val interceptor = HttpLoggingInterceptor()
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
 
@@ -22,6 +22,6 @@ object Retrofit {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        retrofit.create(ApodApiService::class.java)
+        retrofit.create(EpicApiService::class.java)
     }
 }

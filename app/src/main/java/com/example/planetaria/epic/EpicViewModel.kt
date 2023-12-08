@@ -1,23 +1,22 @@
-package com.example.planetaria.apod
+package com.example.planetaria.epic
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.planetaria.apiService.ApodDataModel
-import com.example.planetaria.apiService.ApodRetrofit
+import com.example.planetaria.apiService.EpicDataModel
+import com.example.planetaria.apiService.EpicRetrofit
 import kotlinx.coroutines.launch
 import retrofit2.awaitResponse
 
-
-class ApodViewModel: ViewModel() {
+class EpicViewModel: ViewModel() {
     companion object{
         private const val API_KEY = "gwy76Uekb1BppLNfIcX7USj6d4oYVbdIcVNkfd4x"
     }
 
-    private val _apodData = MutableLiveData<ApodDataModel>()
-    val apodData: LiveData<ApodDataModel> = _apodData
+    private val _epicData = MutableLiveData<List<EpicDataModel>>()
+    val epicData: LiveData<List<EpicDataModel>> = _epicData
 
     init {
         fetchData()
@@ -26,20 +25,17 @@ class ApodViewModel: ViewModel() {
     private fun fetchData() {
         viewModelScope.launch {
             try {
-                val apiService = ApodRetrofit.instance
+                val apiService = EpicRetrofit.instance
                 val response = apiService.getData(API_KEY).awaitResponse()
 
                 if (response.isSuccessful){
-                    _apodData.value = response.body()
+                    _epicData.value = response.body()
+                } else{
+                    Log.d("$this@EpicViewModel", "Unsuccessful response: ${response.code()}")
                 }
-                else{
-                    Log.d("$this@ApodViewModel", "Unsuccessful response: ${response.code()}")
-                }
-
             }catch (e: Exception){
-                Log.d("$this@ApodViewModel", "Exception: ${e.message}")
+                Log.d("$this@EpicViewModel", "Exception: ${e.message}")
             }
-
         }
     }
 }

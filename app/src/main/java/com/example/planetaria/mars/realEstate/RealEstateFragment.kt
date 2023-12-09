@@ -35,6 +35,8 @@ class RealEstateFragment : Fragment() {
 
         viewModel.data.observe(viewLifecycleOwner){ realEstateDataList ->
             adapter.updateData(realEstateDataList)
+
+            binding.realEstateProgressBar.visibility = View.GONE
         }
     }
 

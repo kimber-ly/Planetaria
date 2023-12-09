@@ -9,7 +9,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         application.getSharedPreferences("MyPreferences", android.content.Context.MODE_PRIVATE)
 
     var isDarkMode: Boolean
-        get() = sharedPreferences.getBoolean("darkMode", true)
+        get() = sharedPreferences.getBoolean("darkMode", false)
         set(value) {
             viewModelScope.launch {
                 sharedPreferences.edit().putBoolean("darkMode", value).apply()

@@ -37,6 +37,8 @@ class ApodFragment : Fragment() {
                 .placeholder(R.drawable.baseline_image_24)
                 .into(binding.apodImg)
             binding.apodExplanation.text = data.explanation
+
+            binding.apodProgressBar.visibility = View.GONE
         }
     }
 

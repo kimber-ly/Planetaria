@@ -33,6 +33,7 @@ class MarsPhotoFragment : Fragment() {
 
         viewModel.photos.observe(viewLifecycleOwner){ marsPhotoDataList ->
             adapter.updateData(marsPhotoDataList)
+            binding.marsPhotoProgressBar.visibility = View.GONE
         }
     }
 

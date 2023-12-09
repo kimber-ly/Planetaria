@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".epic.EpicFragment">
 
+    <ProgressBar
+        android:id="@+id/epic_progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"

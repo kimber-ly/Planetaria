@@ -35,6 +35,8 @@ class EpicFragment : Fragment() {
 
         viewModel.epicData.observe(viewLifecycleOwner){ epicDataList ->
             adapter.updateData(epicDataList)
+
+            binding.epicProgressBar.visibility = View.GONE
         }
     }
 

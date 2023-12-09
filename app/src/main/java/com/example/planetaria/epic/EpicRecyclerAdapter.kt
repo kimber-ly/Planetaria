@@ -40,7 +40,10 @@ class EpicRecyclerAdapter(private var items: List<EpicDataModel>):
         val baseUrl = "https://epic.gsfc.nasa.gov/archive/natural/${formattedDate}/png/"
         val fullUrl = "$baseUrl${epicItem.image}.png"
 
-        Picasso.get().load(fullUrl).into(holder.image)
+        Picasso.get()
+            .load(fullUrl)
+            .placeholder(R.drawable.baseline_image_24)
+            .into(holder.image)
         holder.date.text = epicItem.date
         holder.caption.text = epicItem.caption
     }

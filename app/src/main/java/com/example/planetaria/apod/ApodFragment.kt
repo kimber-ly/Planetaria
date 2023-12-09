@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.planetaria.R
 import com.example.planetaria.databinding.FragmentApodBinding
 import com.squareup.picasso.Picasso
 
@@ -31,7 +32,10 @@ class ApodFragment : Fragment() {
         viewModel.apodData.observe(viewLifecycleOwner) { data ->
             binding.apodTitleText.text = data.title
             binding.apodDateText.text = data.date
-            Picasso.get().load(data.url).into(binding.apodImg)
+            Picasso.get()
+                .load(data.url)
+                .placeholder(R.drawable.baseline_image_24)
+                .into(binding.apodImg)
             binding.apodExplanation.text = data.explanation
         }
     }

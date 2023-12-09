@@ -5,8 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.planetaria.apiService.EpicDataModel
-import com.example.planetaria.apiService.EpicRetrofit
+import com.example.planetaria.apiService.epic.EpicDataModel
+import com.example.planetaria.apiService.epic.EpicRetrofit
 import kotlinx.coroutines.launch
 import retrofit2.awaitResponse
 

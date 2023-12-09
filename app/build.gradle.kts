@@ -28,6 +28,7 @@ android {
     }
     buildFeatures{
         viewBinding = true
+        dataBinding = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -63,4 +64,8 @@ dependencies {
 
     //recycler view
     implementation ("androidx.recyclerview:recyclerview:1.3.2")
+
+    //view pager
+    implementation ("androidx.viewpager2:viewpager2:1.0.0")
+
 }

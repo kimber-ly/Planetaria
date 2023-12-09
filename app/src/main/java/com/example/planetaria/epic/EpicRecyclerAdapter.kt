@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.planetaria.R
-import com.example.planetaria.apiService.EpicDataModel
+import com.example.planetaria.apiService.epic.EpicDataModel
 import com.squareup.picasso.Picasso
 import java.text.SimpleDateFormat
 import java.util.Locale

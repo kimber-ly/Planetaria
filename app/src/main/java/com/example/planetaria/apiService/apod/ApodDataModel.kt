@@ -1,4 +1,4 @@
-package com.example.planetaria.apiService
+package com.example.planetaria.apiService.apod
 
 data class ApodDataModel(
     val date: String,

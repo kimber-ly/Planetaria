@@ -1,4 +1,4 @@
-package com.example.planetaria.apiService
+package com.example.planetaria.apiService.epic
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

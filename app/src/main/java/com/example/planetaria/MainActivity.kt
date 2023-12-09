@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.planetaria.apod.ApodFragment
 import com.example.planetaria.databinding.ActivityMainBinding
 import com.example.planetaria.epic.EpicFragment
+import com.example.planetaria.mars.MarsFragment
 import com.google.android.material.navigation.NavigationBarView
 
 class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener {
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         when (item.itemId){
             R.id.apod_menu -> fragmentTransaction(ApodFragment())
             R.id.epic_menu -> fragmentTransaction(EpicFragment())
-            R.id.item_3 -> fragmentTransaction(ItemThreeFragment())
+            R.id.mars_menu -> fragmentTransaction(MarsFragment())
         }
         return true
     }

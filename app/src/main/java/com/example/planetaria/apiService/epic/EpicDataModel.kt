@@ -1,4 +1,4 @@
-package com.example.planetaria.apiService
+package com.example.planetaria.apiService.epic
 
 data class EpicDataModel(
     val image: String,

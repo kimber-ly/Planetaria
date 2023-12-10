@@ -1,4 +1,4 @@
-- AlarmManager aktif saat jam 12.05 WIB. Untuk itu, harus enable notification untuk Planetaria terlebih dahulu.
+- AlarmManager aktif setiap harinya. Untuk itu, harus enable notification untuk Planetaria terlebih dahulu.
 - Ketika notifikasi Apod sudah masuk, maka data pada fragment APOD sudah update. 
 - APOD adalah API NASA yang menampilkan foto dan informasi setiap harinya seputar luar angkasa.
 - EPIC adalah API NASA yang menampilkan foto Bumi yang diambil melalui kapal luar angkasa NOAA DSCOVR.
